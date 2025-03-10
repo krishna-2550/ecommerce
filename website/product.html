@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopEase</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>ShopEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Related Products</h3>
+            <div class="related-products">
+                <!-- Related products will be added dynamically -->
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="product-details">
+            <div class="product-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/400" alt="Product Image" id="mainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail 1" onclick="changeImage(this.src)">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail 2" onclick="changeImage(this.src)">
+                        <img src="https://via.placeholder.com/100" alt="Thumbnail 3" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Premium Product Name</h1>
+                    <div class="product-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="rating-count">(4.5/5 - 123 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$99.99</span>
+                        <span class="original-price">$129.99</span>
+                        <span class="discount">23% OFF</span>
+                    </div>
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>Detailed product description goes here. This is a premium quality product that offers excellent value for money.</p>
+                    </div>
+                    <div class="product-options">
+                        <div class="size-selector">
+                            <h3>Size</h3>
+                            <select id="size">
+                                <option value="s">Small</option>
+                                <option value="m">Medium</option>
+                                <option value="l">Large</option>
+                                <option value="xl">Extra Large</option>
+                            </select>
+                        </div>
+                        <div class="quantity-selector">
+                            <h3>Quantity</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decrementQuantity()">-</button>
+                                <input type="number" id="quantity" value="1" min="1">
+                                <button onclick="incrementQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>ShopEase is your one-stop destination for all your shopping needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@shopease.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html> 
